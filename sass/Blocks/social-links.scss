@@ -1,0 +1,60 @@
+.social-links {
+	@include list-none;
+	margin: 0 auto;
+	margin-bottom: 49px;
+	width: 200px;
+	height: 29px;
+	font-size: 0;
+}
+
+.social-links li {
+	display: inline-block;
+	padding: 0 21px;
+}
+
+
+.social-link {
+	display: block;
+	width: 24px;
+	height: 29px;
+	background: url(../img/social.png) 0 0 no-repeat;
+	vertical-align: middle;
+
+	&--in {
+		background-position: 0px 7px;
+	}
+
+	&--fa {
+		background-position: -42px 0px;
+	}
+
+	&--tw {
+		background-position: -77px 8px;
+	}
+
+	&--in:hover {
+		background-position: -121px 7px;
+	}
+
+	&--fa:hover {
+		background-position: -163px 0px;
+	}
+
+	&--tw:hover {
+		background-position: -198px 8px;
+	}
+
+	&--in:active {
+		background-position: -242px 7px;
+	}
+
+	&--fa:active {
+		background-position: -284px 0px;
+	}
+
+	&--tw:active {
+		background-position: -319px 8px;
+	}
+}
+
+

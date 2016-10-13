@@ -1,53 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Mishka</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Mishka | Вязание на заказ</title>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/picturefill.js"></script>
 </head>
 <body>
 	<header class="page-header">
-		<div class="page-header__logo">
-			<img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Mishka - милые штуки ручной 
-работы для дома"></div>
-		<nav class="main-nav main-nav--closed main-nav--nojs">
-			<button class="main-nav__toggle">Открыть меню</button>
+		<nav class="main-nav  main-nav--closed  main-nav--nojs">
 			<div class="main-nav__wrapper">
-				<ul class="main-nav__list">
-					<li class="main-nav__item">
-						<a>Каталог товаров</a>
-					</li>
-					<li class="main-nav__item">
-						<a href="">Вязание на заказ</a>
-					</li>
-				</ul>
+				<div class="main-nav__logo">
+					<a href="index.html">
+						<picture>
 
-				<div class="page-header__logo-tablet">
-					<img src="img/mishka-logo-tablet.svg" width="113" height="46" alt="Mishka - милые штуки ручной 
-работы для дома"></div>
-				<div class="page-header__logo-desktop">
-					<img src="img/mishka-logo-desktop.svg" width="149" height="72" alt="Mishka - милые штуки ручной 
-работы для дома"></div>
+							<source media="(min-width: 1150px)" srcset="data:img/png;base64,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" type="image/svg+xml">
+							<source media="(min-width: 768px)" srcset="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAAAuCAMAAAAoeAbAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAY1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQUFDv7+////8gICC/v79AQEBgYGCfn58wMDCvr6/f39+AgIBwcHCPj4/Pz88QEBBYpr9bAAAAEHRSTlMAIEBQgL+vcBCf38+PMO9gMoidYQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAQSSURBVFjDvZjpYqwqDIBbx9k6Z1oFwQUX3v8pDwkEg6NOz72d5kerY8hHyAL69vYKec8OeX48HotZjqfzO1e5ZOf86lQ+Ci63Y5Q/RyanHOSQgVyYFXcLZlIjnHonzfOt+B35DMjTL/GcXP1abCuUQorqJ4lHJB63FZSUUv+ok5hXO89fQzw/IdbPzehGzVptZ8y2avYkb4DY+cuq7Bulur7Fm6EvZ63KaSm6qfcnCcTPODm2ftWogDRKKdC0BrYXZ7t1/8bgnhukGbEVUg7RSj2qyZkYbTR8drUfLu0U3XGqbhwsje0HTFUg11rXyNWI6FHPSNkkxMkPhLGDgd8nOU/PST7XxgBPqBLAhpwnBrcDGQxERQ8UuiyWa9o63mCDYcGJh3DZAaTheFhkW0LAupiynRSNXRIL0PYDDVm3IiwDf1pgQeYsSaQIfjWBCFFRj0WySYzLDRbI2MQW74FIQTeBGCx20dA20QYjnmPnJE/ne5uJ6FaIeitTYr9CnEhRUHS5iyUbka7QTOwlYUIYd4g2LqO/IJvRxWTEFtFTfO6oJ8RihVhyF79F1KHAbXBhSWxWiS6zZAvlCvbFnCLbxPsDcfBFlRAhKsauEb01bx+0uI8jI859L3sgmlCakTj5xinNiI213iTy+upZG4IVaLRdJQoEVYHdB1QRvUbpAlG7rtcbJMJjpeMosgbmJqUM+31JxCaoIIemoCMxTi60GgUTuvY/R6nnsdFJLRciaK85p0T0xU1NUOSnxd7TzCWv1Nh3BvXIfi1JHZOvdIvQqR5Wu4lZkKdx9M3GrRwRm5XaF0gULCc1rXcTmwhrpmlt5bGTe50QsIG0Niox5oXPyYrWs6Io7BGz1JaPhv4usZxXGWtuosr9PtE7WewRBUZJzdH3YzF+A+XODvGSEjHk6oFo634gwoR/TTHfV9F+RWxGHJKO5bbklBh2piVxCgZ8fs2d3C7ucbhJifxQgkQ6WfkWCZ3DtAmx8QbmHKximbK4Spbyep9IR/LQcCs8FxKpDtpxkN8KoYjKlEhnVONH7hFPKbGIOQh7bhtGxkENaqmYDPicH1gx9eyS2HEitQDJiUSiWg8TKKzBC1iCgTJFJV5Yb4cRa24YiPQWMHHfbUBUcFAN01Fu73DBhuOu89RUNH/fc2Iv7DDSQnTUSetw6I3EWJCa/e5siNDB8X4MnVP5wZVuw8waBb7quBnBqbrfewF0xPvqg3bxSlXpoSbM/xJHfPsBM/8gh/23uRdItrGorxP3beT6q8AbvCT/+U3iwX/s+Piv42/8u9LTj0IfefxqdcmX2p9o43MV4T5XfbmvUysfx+5f+WltFFq83hfaWfblTJ2zha1LRvL+9k9y+eLeXQ8v+f639NjvEbfrOfHuL+wARG/wIh8NAAAAAElFTkSuQmCC" type="image/svg+xml">
+
+							<img src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAjCAMAAAA5Zw23AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACjBUbJAAAAEHRSTlMAIM9AjxBg768wn9+Av3BQbGZ5YwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAALHSURBVEjHzZbbdqUgDIZVRA4GzPs/bckJsO7ddtaarpncKAIf4U8ILsvD1g1xXf66OUR0/x67uh/tjbD7mOP8c8gRMOqrj4jHN8Tk0oRN+USyAA0f5y2070VfCyIMHyoAsO8p9oWXyKN9LDwwtxZAIXBdDlXGZzxXYikWEDd1SZ2QcS3sPe7YxzTbtUHOA03n4SJ8x/qgErTlEJrItHwUFGZdj96ZBBd3gC62peX6jEVz9jQtKr9ssiK7Le5WxUrPHLiRHvQ8OrY7exjeuhgLJi1/Og1b7tjrJok6G7zC8hMb+EtQrChXHlhafO3YJM6aUJYPpe8YZScOv8Amm8jaaAC7s/6B5QRiwP4VdpmwRZVOpmzfi1I6loJ2PrDon9jTsJUJAlsHVvVRLEh6TViatAHZ4SdsMSyQsirCFF/C1tWwwYsGulKLod/QrJ0rmpidc3BSJ2sJUxIRoYTSTPdMWZWpu60dJBJRM9mxRTkvOBm3YlB/liGlWZSgauvoAZ4r42mgQooUa9HsPEmDzYVWaepg6GKbHiUJSLdsIDDtLNs9heqc0mocRxrmJVx5wsLAMijpKdOtsB+X6HXpAX1gnZzbqp/8C2y/MmrH7lIL+NTCa+zFSaCfLAu9czdsHdM2rZqcZP4tlsVa7iJcodcT9F0YedksTzVodyx0eqBN3bFTmULnLeGls59sDdo7bKLr02nR4czrJVoG4u2yGAWjcNAGVlPGyv5cMaTggk5db5VbRA4de/Xsl7YX1265r9hi3tJRTplbRb0VN3BcHYE2BVazKTeyp7ut9NS35CwFvCSPHBMSZi856bTmZyzZqhtgOOj20/b6/K/we55/ZyqVjv349M+y/sL/2X9n3qn9dLMrj37dl469BHxtZxnG1wXs2trmYdRZp4C5Gt8R/9BKBqtRvrID0fzZwSy+8ulmfM1kGX37Y/0AxJNOQSjqpS4AAAAASUVORK5CYII=" width="86" height="35" alt="Mishka - милые штуки ручной 
+					работы для дома"></picture>
+					</a>
+					<button class="main-nav__toggle">Открыть меню</button>
+				</div>
+
+				<ul class="main-nav__list main-nav__list--catalog">
+					<li class="main-nav__item">
+						<a href="catalog.html">Каталог товаров</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="knitting.html">Вязание на заказ</a>
+					</li>
+					<li class="main-nav__item-span"><span>Бесплатная доставка по России</span></li>
+				</ul>
 
 				<ul class="main-nav__list-user">
 					<li class="main-nav__item-user">
-						<a class="search" href="">Поиск по сайту</a>
+						<a class="search-item" href="">Поиск по сайту</a>
 					</li>
 					<li class="main-nav__item-user">
-						<a href="">Корзина: пока пуста</a>
+						<a class="cart-item" href="">Корзина: пока пуста</a>
 					</li>
 				</ul>
+
 			</div>
 		</nav>
-		<div class="under-nav">
+		<div class="under-nav  under-nav--knitting">
 			<div class="under-nav__wrapper">
-				<ul class="under-nav__first-nav  under-nav__first-nav--tablet">
-					<li>
-						<a href="catalog.html">Каталог товаров</a>
-					</li>
-					<li>
-						<a href="">Вязание на заказ</a>
-					</li>
-				</ul>
+
 				<ul class="under-nav__first-nav  under-nav__first-nav--desktop">
 					<li>
 						<a href="">Новые поступления</a>
@@ -57,95 +59,118 @@
 					</li>
 				</ul>
 				<span>Бесплатная доставка по России</span>
-				<h1 class="under-nav__page-title">Вязание на заказ</h1>
+				<h1 class="under-nav__page-title  under-nav__page-title--knitting">Вязание на заказ</h1>
 			</div>
 		</div>
 	</header>
 	<section class="order">
 		<div class="order__wrapper">
 			<p class="order__description">
-				Мы будем рады воплотить в жизнь ваши пожелания! 
-Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+				Мы будем рады воплотить в жизнь ваши пожелания!
+				<br>
+				Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
 			</p>
 			<form action="#" method="post" class="order__form">
-				<h3 class="order__title">Тип</h3>
-				<label class="order__radio">
-					<input type="radio" value="interior" name="knit" checked>
-					<span class="order__radio-indicator"></span>
-					Аксессуар для интерьера
-				</label>
-				<label class="order__radio">
-					<input type="radio" value="toy" name="knit" checked>
-					<span class="order__radio-indicator"></span>
-					Детская игрушка
-				</label>
-
-				<h3 class="order__title">Цвет</h3>
-				<label class="order__checkbox">
-					<input type="checkbox" name="white" checked>
-					<span class="order__checkbox-indicator"></span>
-					Белый
-				</label>
-				<label class="order__checkbox">
-					<input type="checkbox" name="grey" checked>
-					<span class="order__checkbox-indicator"></span>
-					Серый
-				</label>
-				<label class="order__checkbox">
-					<input type="checkbox" name="tiffany">
-					<span class="order__checkbox-indicator"></span>
-					«Тиффани»
-				</label>
-				<label class="order__checkbox">
-					<input type="checkbox" name="black">
-					<span class="order__checkbox-indicator"></span>
-					Черный
-				</label>
-				<label class="order__checkbox">
-					<input type="checkbox" name="rose">
-					<span class="order__checkbox-indicator"></span>
-					Розовый
-				</label>
-				<label class="order__checkbox">
-					<input type="checkbox" name="orange">
-					<span class="order__checkbox-indicator"></span>
-					Оранжевый
-				</label>
-
-				<h3 class="order__title">ФИО</h3>
-
-				<label class="order__text-field" for="surname">
-				Фамилия:	<input type="text" name="surname"></label>
-				<label class="order__text-field" for="name">Имя:
-					<input type="text" name="name"></label>
-				<label class="order__text-field" for="patronymic">Отчество:
-					<input type="text" name="patronymic"></label>
-
+				<div class="order__form-row">
+					<h3 class="order__title">Тип</h3>
+					<div class="order__form-column">
+						<label class="order__radio">
+							<input type="radio" value="interior" name="knit" checked>
+							<span class="order__radio-indicator"></span>
+							Аксессуар для интерьера
+						</label>
+						<label class="order__radio">
+							<input type="radio" value="toy" name="knit" checked>
+							<span class="order__radio-indicator"></span>
+							Детская игрушка
+						</label>
+					</div>
+				</div>
+				<div class="order__form-row">
+					<h3 class="order__title">Цвет</h3>
+					<div class="order__form-colors">
+						<div class="order__form-colors-trio">
+							<label class="order__checkbox">
+								<input type="checkbox" name="white" checked>
+								<span class="order__checkbox-indicator"></span>
+								Белый
+							</label>
+							<label class="order__checkbox">
+								<input type="checkbox" name="grey" checked>
+								<span class="order__checkbox-indicator"></span>
+								Серый
+							</label>
+							<label class="order__checkbox">
+								<input type="checkbox" name="tiffany">
+								<span class="order__checkbox-indicator"></span>
+								«Тиффани»
+							</label>
+						</div>
+						<div class="order__form-colors-trio">
+							<label class="order__checkbox">
+								<input type="checkbox" name="black">
+								<span class="order__checkbox-indicator"></span>
+								Черный
+							</label>
+							<label class="order__checkbox">
+								<input type="checkbox" name="rose">
+								<span class="order__checkbox-indicator"></span>
+								Розовый
+							</label>
+							<label class="order__checkbox">
+								<input type="checkbox" name="orange">
+								<span class="order__checkbox-indicator"></span>
+								Оранжевый
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="order__form-row">
+					<h3 class="order__title">ФИО</h3>
+					<div class="order__form-column">
+						<label class="order__text-field" for="surname" >
+							Фамилия:<br>
+							<input type="text" id="surname" name="surname" onblur="this.placeholder='Укажите фамилию'" onfocus="this.placeholder=''" placeholder="Укажите фамилию"></label>
+						<label class="order__text-field" for="name">
+							Имя:<br>
+							<input type="text" id="name" name="name" onblur="this.placeholder='Введите ваше имя'" onfocus="this.placeholder=''" placeholder="Введите ваше имя"></label>
+						<label class="order__text-field" for="patronymic">
+							Отчество:<br>
+							<input type="text" id="patronymic" name="patronymic" onblur="this.placeholder='Отчество, если желаете'" onfocus="this.placeholder=''" placeholder="Отчество, если желаете"></label>
+					</div>
+				</div>
+				<div class="order__form-row">
 					<h3 class="order__title">Тел</h3>
 
-				<label class="order__text-field" for="tel">
-		<input type="tel" name="tel"></label>
+					<label class="order__text-field" for="tel">
+						<input type="tel" id="tel" name="tel" onblur="this.placeholder='+7 ХХХ ХХ ХХ'" onfocus="this.placeholder=''" placeholder="+7 ХХХ ХХ ХХ"></label>
+				</div>
+				<div class="order__form-row">
+					<h3 class="order__title  order__title--email">E-mail</h3>
 
-				<h3 class="order__title">E-mail</h3>
+					<label class="order__text-field" for="email">
+						<input type="email" id="email" name="email" onblur="this.placeholder='Ваш e-mail'" onfocus="this.placeholder=''" placeholder="Ваш e-mail"></label>
+				</div>
+				<div class="order__form-row">
+					<h3 class="order__title">Доп</h3>
 
-				<label class="order__text-field" for="email">
-	<input type="email" name="email"></label>
-
-				<h3 class="order__title">Доп</h3>
-
-				<label class="order__text-field" for="message">
-			<textarea name="message" placeholder="Опишите все ваши пожелания к заказу"></textarea></label>
-
-				<button class="order__button  btn" type="button">Отправить заказ</button>
-				<span class="order__field-required">Все поля являются обязательными</span>
+					<label class="order__text-field" for="message">
+						<textarea name="message" id="message" onblur="this.placeholder='Опишите все ваши пожелания к заказу'" onfocus="this.placeholder=''" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+					</label>
+				</div>
+				<div class="order__form-button">
+					<button class="order__button  btn" type="button">Отправить заказ</button>
+					<span class="order__field-required">Все поля являются обязательными</span>
+				</div>
 			</form>
 		</div>
 	</section>
 	<footer class="page-footer">
 		<div class="page-footer__wrapper">
 			<div class="page-footer__logo">
-				<img src="img/logo-footer.svg" width="102" height="34" alt="Mishka - милые штуки ручной 
-работы для дома"></div>
+			<a href="index.html">
+			<img src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAAAiCAMAAACayFwqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEVGwa7///9Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa4AAADI3OZYAAAAEXRSTlMAAGDf7zC/gFAQcK8gQM+Pn9I/KOAAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4AoMFDMdVrQUfgAAAxNJREFUSMfll9uWrCgMhh1AIgoK7/+yAzkRLbt277XmbrjpkkO+kD8Bellem/MtrMt/0f7B9sNgbK3B/xCzAST9SPsR819ionysZQfYC1lLpSQz8egTi1LO1s70G0xysDLmwo5SQ+M2Oi5rtrdmvh+UXABiPBxiUg3B6ZDrq+oIRYwYs1RbC7VPR44zZvu6EVaLqeZ3qV68OwZmjPlbsI63mKyB1FKzO4V1GNvZ8gx07nYOKGse1tvaMcH6g6smdFnn53BgMxggoyZXpkzDp0qdw3wPG65TtRN+jR9wjs7h4CkZteflsRtvMXm6dE5fcVwwjSt+E4yjv4U/75JvEqJmc6WSeLwYXjF1ioh2y08Y9Z6HLomF2YxN8jumJZWmhWkk/REDgpmbQZPZzK8dQ6lK2bKqULINE9AHJpNKgjGbWaxvWOcTc4qs9NNibDViQC5TmBtPNJvJdjfHHYM+n+2hzSdGg8RDPNHNwN8XAWOgaRLk9oo53jEew8cTMXfgF5iQOGY3zNhz8xEbnsQTQyphkpQsJhTjDMZDUUxfcs74rexRlj4ULdGysxQH4M3pU8XEzFdaIZKQe2MgYMnLhtWjtfS2loMDC802xpiIyD7vLRIGFRzHzy4Y3x732kEVBRpET9xAK4Ob28Hs2gpcMVY+OwmT5E7Jgrnda1qOGaeDTYYo+4pc2VY/XsYpEEV9r1kCTwxpbY7KG+bknHbfMF5kO37GLE+MOaJbGNUYJPnfMLa+uoHvmGww5oimKqlS/V8wiVP5E5PpiZGn1Q/MNTvgO4a8Wj4wq+dIFHLjgUk2JeXq/YYBEvKJAXE2T23iu1iaBBZDyybGeTxNBLMbOpgzDDRtPzFYFvGh6wPDjR8wUiZ4O25adKD4NwxO5tp6YrY7Rl5QXCbyoOFE2q1XpM2cwBHab5hhJ3Rt9jtG73Y+ohTr6FFUNGjbLDi9kU49v65F9fLbeNxeZ9wmRm7BtYVDNeLzr3D/poLD8MPPs6+j+79F/VGrF3su+e0NfdlVC71uh9vHnp9Ti/v8RyuXZw891f8FA5JgPzM5dPoAAAAASUVORK5CYII=" width="102" height="34" alt="Mishka - милые штуки ручной 
+работы для дома"></a></div>
 			<ul class="page-footer__social social-links">
 				<li>
 					<a class="social-link social-link--in" href="">Instagram</a>
@@ -157,11 +182,29 @@
 					<a class="social-link social-link--tw" href="">Twitter</a>
 				</li>
 			</ul>
-			<div class="page-footer_develop"> <b>Разработано</b>
+			<div class="page-footer_develop">
+				<span>Разработано</span>
 				<a href="https://htmlacademy.ru/">
-					<img src="img/htmlacademy.svg" width="27" height="34" alt="HTML-Academy"></a>
+					<img src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAiCAMAAACZf1ICAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAABGwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa5Gwa4AAABkic+xAAAAEHRSTlMAMEBQgL/fryBg7xCfj3DPfZI5KAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAErSURBVCjPdZPZooYgCIRdwN2a93/ag0tp/R3u8oMRBlNKQhtLxOwAOPZE1oR2rJjxHcwKPZmJotGSakxsEqkdC8vqK3Jn6jtezHrzDwuMhJI/WK5IUVFKxw+LCbWVhAJnHkwzWM98w/DhZkNuhWhQHuyYcttsBGc7W3KKKd89d1ZWwZFu8TLq1kxk/FAx56gjJJrMg+yJqst1XxOfM2lKzh6Q5HzPZ92Yib2Iyn54m70aMUtyJaevemcFrcBZVefONxailBmHhF/GrKuU0ReTEhKP+Ryod712JL1E6zqZ0267DeJId+NyqbNzPpLey/YBsVdSw7TTHWsNzXXZ7DL0Wh8wtyUv4jJUDQPBYX8Fw9CZaB8ydciMC95/Qbve0ap/Rh99u/f1vJ79/gHrBRWzyjNurQAAAABJRU5ErkJggg==" width="27" height="34" alt="HTML-Academy"></a>
 			</div>
 		</div>
 	</footer>
+
+	<script>
+		var navMain = document.querySelector('.main-nav');
+		var navToggle = document.querySelector('.main-nav__toggle');
+
+		navMain.classList.remove('main-nav--nojs');
+
+		navToggle.addEventListener('click', function()  {
+			if (navMain.classList.contains('main-nav--closed')) {
+				navMain.classList.remove('main-nav--closed');
+				navMain.classList.add('main-nav--opened');
+			} else {
+				navMain.classList.add('main-nav--closed');
+				navMain.classList.remove('main-nav--opened');
+			}
+		})
+	</script>
 </body>
 </html>

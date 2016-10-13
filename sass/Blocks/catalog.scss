@@ -1,0 +1,27 @@
+.catalog {
+	background-color: #fff;
+	color: black;
+}
+
+.catalog__wrapper {
+	@include container-fluid();
+	padding: 0 30px;
+}
+
+.catalog__list {
+	@include list-none;
+}
+
+@media ($desktop) {
+
+	.catalog__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 57px;
+	}
+
+	.catalog__wrapper {
+	}
+
+}

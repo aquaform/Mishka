@@ -24,6 +24,8 @@
 }
 
 body {
+  max-width: 1150px;
+  margin: 0 auto;
 	padding: 0;
 	font-family: $opensans;
 	font-size: 14px;
@@ -37,3 +39,26 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+a, 
+a:hover, 
+a:visited {
+	text-decoration: none;
+  cursor: pointer;
+}
+
+.contacts__google-map {
+        height:400px;
+        width:100%; 
+    }
+    .gm-style-iw * {
+        display: block;
+        width: 100%;
+    }
+    .gm-style-iw h4, .gm-style-iw p {
+        margin: 0;
+        padding: 0;
+    }
+    .gm-style-iw a {
+        color: #4272db;
+    }
