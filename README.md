@@ -4,6 +4,6 @@
 
 ## Ссылки на Demo
 
-* [Главная страница] (http://)
-* [Каталог товаров] (http://)
-* [Вязание на заказ] (http://)
+* [Главная страница] (http://verstkus.ru/mishka/)
+* [Каталог товаров] (http://verstkus.ru/mishka/catalog.html)
+* [Вязание на заказ] (http://verstkus.ru/mishka/knitting.html)
